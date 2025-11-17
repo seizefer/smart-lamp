@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "SmartLamp",
+    "slug": "smart-lamp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1a1a2e"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.smartlamp.app",
+      "infoPlist": {
+        "UIBackgroundModes": ["audio", "fetch"],
+        "NSMicrophoneUsageDescription": "This app needs access to the microphone for sleep monitoring.",
+        "NSLocationWhenInUseUsageDescription": "This app needs access to your location for weather information."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1a1a2e"
+      },
+      "package": "com.smartlamp.app",
+      "permissions": [
+        "VIBRATE",
+        "WAKE_LOCK",
+        "RECEIVE_BOOT_COMPLETED",
+        "SCHEDULE_EXACT_ALARM"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "sounds": ["./assets/sounds/alarm.mp3"]
+        }
+      ]
+    ]
+  }
+}
